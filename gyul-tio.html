@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>귤티오™ — GTO의 반대편</title>
+<style>
+:root{
+  --bg:#0b0d12; --panel:#121620; --panel2:#181d28; --text:#f4f5f7;
+  --muted:#9aa3b2; --orange:#ff9d2e; --orange2:#ff6b1a; --green:#55d88a;
+  --red:#ff5c6c; --line:#252c39;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:radial-gradient(circle at 80% 0%,#2a1607 0,#0b0d12 35%);
+  color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+.wrap{max-width:1080px;margin:auto;padding:40px 22px 80px}
+.hero{padding:45px 0 35px}
+.badge{display:inline-block;border:1px solid #6b3b10;background:#211407;color:#ffad43;
+  padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em}
+h1{font-size:clamp(48px,8vw,88px);margin:16px 0 5px;letter-spacing:-.07em}
+h1 span{color:var(--orange)}
+.subtitle{font-size:20px;color:#c7ccd5;max-width:700px;line-height:1.55}
+.disclaimer{margin-top:20px;color:#747d8c;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:25px}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+  border-radius:18px;padding:22px;box-shadow:0 15px 50px #0004}
+.card h2{margin:0 0 14px;font-size:20px}
+.big{font-size:34px;font-weight:900;color:var(--orange)}
+.quote{border-left:3px solid var(--orange);padding:10px 15px;color:#dce1e8;line-height:1.7;background:#0d1017;border-radius:0 10px 10px 0}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{text-align:left;padding:13px 10px;border-bottom:1px solid var(--line);font-size:14px}
+th{color:#8993a3;font-size:12px;text-transform:uppercase}
+.action{font-weight:900}
+.fold{color:var(--red)} .call{color:#61b8ff}.raise{color:var(--green)}
+.section{margin-top:50px}
+.section h2{font-size:30px;letter-spacing:-.04em}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rule{padding:18px;background:#10141c;border:1px solid var(--line);border-radius:14px}
+.rule b{display:block;color:var(--orange);font-size:18px;margin-bottom:7px}
+.hand{font-size:30px;font-weight:900;letter-spacing:-.04em}
+.small{color:var(--muted);font-size:13px;line-height:1.6}
+.footer{margin-top:55px;text-align:center;color:#697281;font-size:12px}
+.tangerine{font-size:44px;display:inline-block;filter:drop-shadow(0 8px 12px #0008)}
+@media(max-width:760px){.grid,.rules{grid-template-columns:1fr}.wrap{padding-top:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="badge">UNSOLVED POKER THEORY · GYUL TIO™</div>
+    <div class="tangerine">🍊</div>
+    <h1>귤<span>티오</span></h1>
+    <p class="subtitle">
+      GTO가 수학적으로 최적의 플레이를 찾는다면,<br>
+      귤티오는 <b>“상대가 뭘 들었든 일단 내가 재밌는가?”</b>를 찾습니다.
+    </p>
+    <p class="disclaimer">※ 본 이론은 검증되지 않았으며, 검증될 예정도 없습니다. 모든 통계는 귤의 머릿속에서 실시간 생성됩니다.</p>
+  </header>
+
+  <section class="card">
+    <h2>🍊 제1원칙 — 프리플랍은 라이브카드가 지배한다</h2>
+    <div class="quote">
+      <b>AA, KK, QQ, JJ, TT?</b><br>
+      너무 강한 핸드입니다. 그래서 상대가 플랍에서 뭔가 맞출 가능성이 높습니다.
+      특히 라이브카드가 있으면 내 프리미엄 핸드가 찢길 수 있으므로 과감한 폴드가 권장됩니다.
+      <br><br>
+      반면 <b>48o</b>는 상대가 예상하지 못합니다. 그리고 예상하지 못하는 핸드는 강합니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>프리플랍 귤티오 레인지</h2>
+    <div class="card">
+      <table>
+        <tr><th>핸드</th><th>귤티오 판단</th><th>이유</th></tr>
+        <tr><td class="hand">AA</td><td class="action fold">FOLD</td><td>너무 유명함. 상대가 눈치챔.</td></tr>
+        <tr><td class="hand">KK</td><td class="action fold">FOLD</td><td>A 한 장 뜨면 멘탈 손상. EV보다 정신건강 우선.</td></tr>
+        <tr><td class="hand">QQ</td><td class="action fold">FOLD</td><td>JJ에게도 지고 KK에게도 지고 AA에게도 짐.</td></tr>
+        <tr><td class="hand">JJ</td><td class="action fold">FOLD</td><td>플랍에 Q/K/A가 뜨는 전통적인 이벤트.</td></tr>
+        <tr><td class="hand">TT</td><td class="action fold">FOLD</td><td>오버카드가 너무 많음. 숫자가 무섭다.</td></tr>
+        <tr><td class="hand">AKs</td><td class="action call">CALL</td><td>높은 카드라 좋지만 둘 다 맞아야 진짜 강함.</td></tr>
+        <tr><td class="hand">A5s</td><td class="action raise">RAISE</td><td>A도 있고 5도 있음. 무엇이든 대표 가능.</td></tr>
+        <tr><td class="hand">76s</td><td class="action raise">RAISE</td><td>연결되어 있음. 인생도 연결되어야 한다.</td></tr>
+        <tr><td class="hand">48o</td><td class="action raise">RAISE 8BB</td><td>옵숫 = 무늬 2개. 플러시 루트도 2개.</td></tr>
+        <tr><td class="hand">72o</td><td class="action raise">3-BET BLUFF</td><td>상대가 내 패를 맞히는 순간 이미 심리전에서 패배.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>수딧은 왜 강한가?</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="big">×2</div>
+        <h2>모양이 두 개니까</h2>
+        <p class="small">
+          <b>Suited(s)</b>는 두 카드의 무늬가 같습니다. 예: 4♠8♠.
+          그래서 플러시 루트가 하나뿐입니다.<br><br>
+          반면 <b>Offsuit(o)</b>는 두 카드의 무늬가 다릅니다. 예: 4♠8♥.
+          귤티오에서는 이를 <b>“무늬를 두 개 들고 있다”</b>고 해석합니다.
+          따라서 플러시 기대감이 <b>2배</b>입니다.
+        </p>
+      </div>
+      <div class="card">
+        <div class="big">+∞</div>
+        <h2>상대의 혼란</h2>
+        <p class="small">
+          “왜 48로 들어왔지?”라는 생각을 상대에게 심는 순간,
+          상대는 포커를 하는 게 아니라 인생을 복기하게 됩니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>포스트플랍 의사결정 엔진</h2>
+    <div class="rules">
+      <div class="rule"><b>1. 맞췄다?</b>베팅한다.</div>
+      <div class="rule"><b>2. 못 맞췄다?</b>상대가 안 맞췄을 가능성이 더 높다.</div>
+      <div class="rule"><b>3. 상대가 세게 나온다?</b>그만큼 내가 세게 나오면 된다.</div>
+      <div class="rule"><b>4. 드로우다?</b>아직 안 진 것이다.</div>
+      <div class="rule"><b>5. 원페어다?</b>세게 베팅해서 투페어처럼 보이게 한다.</div>
+      <div class="rule"><b>6. 아무것도 없다?</b>그 누구보다 아무것도 없는 사람처럼 행동한다.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>귤티오의 핵심 수학</h2>
+    <div class="card">
+      <table>
+        <tr><th>상황</th><th>일반적인 계산</th><th>귤티오 계산</th></tr>
+        <tr><td>Suited</td><td>같은 무늬 2장</td><td>플러시 루트 1개</td></tr>
+        <tr><td>Offsuit</td><td>다른 무늬 2장</td><td>무늬 2개 → 플러시 루트 2개</td></tr>
+        <tr><td>오픈엔디드</td><td>8 outs</td><td>8 outs + 마음속 4 outs</td></tr>
+        <tr><td>거터</td><td>4 outs</td><td>4 outs × 간절함</td></tr>
+        <tr><td>오버페어</td><td>강한 메이드핸드</td><td>라이브카드에게 취약</td></tr>
+        <tr><td>72o</td><td>최약 핸드</td><td>상대가 가장 예상 못 하는 핸드</td></tr>
+        <tr><td>상대 올인</td><td>팟오즈 계산</td><td>“왜 올인했지?”부터 생각</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>🥷 귤티오 침투 지수 계산기</h2>
+    <p class="small">3-bet / 4-bet 구간에서 <b>“지금 들어가면 상대 레인지의 틈을 찌를 수 있는가?”</b>를 계산합니다. 공식은 물론 귤티오식입니다.</p>
+    <div class="card">
+      <div class="rules">
+        <div class="rule"><b>상대 액션</b><select id="inAction"><option value="0">3-bet</option><option value="12">4-bet</option><option value="20">5-bet — 위험구역</option></select></div>
+        <div class="rule"><b>내 포지션</b><select id="inPos"><option value="14">BTN</option><option value="12">CO</option><option value="9">HJ</option><option value="7">UTG</option><option value="5">SB</option><option value="4">BB</option></select></div>
+        <div class="rule"><b>상대 레인지 압축도 <output id="rangeOut">65</output></b><input id="inRange" type="range" min="0" max="100" value="65"></div>
+        <div class="rule"><b>SPR</b><input id="inSpr" type="number" min="0.2" max="20" step="0.1" value="3"><span class="small">낮을수록 한 방 침투가 쉬움</span></div>
+        <div class="rule"><b>폴드 유도 가능성 <output id="foldOut">60</output></b><input id="inFold" type="range" min="0" max="100" value="60"></div>
+        <div class="rule"><b>내 핸드의 귤스러움 <output id="gyulOut">80</output></b><input id="inGyul" type="range" min="0" max="100" value="80"></div>
+      </div>
+      <div class="row" style="margin-top:18px"><button id="penetrate">침투 지수 계산</button><button class="btn2" id="randomScenario">상황 랜덤 생성</button></div>
+      <div style="margin-top:22px"><div class="tiny">GYUL INFILTRATION INDEX</div><div class="big" id="inScore">-- / 100</div><div class="bar"><div class="fill" id="inFill"></div></div><div id="inVerdict" class="action" style="margin-top:12px">아직 침투 여부를 판단하지 않았습니다.</div><p id="inReason" class="muted"></p></div>
+    </div>
+    <div class="rules" style="margin-top:12px">
+      <div class="rule"><b>0–30</b><span class="fold">귤티오 금지구역</span><br><span class="small">침투가 아니라 자진퇴거입니다.</span></div>
+      <div class="rule"><b>31–60</b>관찰구역<br><span class="small">칩에 손 올리지 말고 상대 눈빛부터 봅니다.</span></div>
+      <div class="rule"><b>61–80+</b><span class="raise"> 침투 가능</span><br><span class="small">귤이 칩을 집기 시작합니다.</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>귤티오 TAG 모드</h2>
+    <div class="grid">
+      <div class="card">
+        <h2>🍊 Tight</h2>
+        <p>강한 핸드는 폴드한다.</p>
+        <p class="small">너무 강해서 상대가 알아보기 때문. AA는 특히 유명함.</p>
+      </div>
+      <div class="card">
+        <h2>🔥 Aggressive</h2>
+        <p>약한 핸드는 더 세게 베팅한다.</p>
+        <p class="small">약하다는 사실을 들키면 안 되기 때문.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section card">
+    <h2>오늘의 귤티오 명언</h2>
+    <div class="quote">
+      <span style="font-size:28px">“</span>
+      <b>GTO는 상대와 무승부를 만드는 전략이고,<br>
+      귤티오는 상대를 혼란스럽게 만드는 전략이다.</b>
+      <span style="font-size:28px">”</span>
+      <br><br>
+      <span class="small">— 귤, 아직 솔버에 등록되지 않은 플레이어</span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    GYUL TIO™ · Powered by 감 · 확률보다 자신감 · 2026<br>
+    This page is satire. Please do not actually fold AA.<br>
+    <b>Suited = 같은 무늬 · Offsuit = 다른 무늬</b>
+  </footer>
+</div>
+<script>
+(()=>{
+ const $=id=>document.getElementById(id), range=$("inRange"), fold=$("inFold"), gyul=$("inGyul");
+ range.oninput=()=>$("rangeOut").value=range.value; fold.oninput=()=>$("foldOut").value=fold.value; gyul.oninput=()=>$("gyulOut").value=gyul.value;
+ function calc(){
+  const action=+$("inAction").value,pos=+$("inPos").value,r=+range.value,f=+fold.value,g=+gyul.value,spr=Math.max(.2,Math.min(20,+$("inSpr").value||3));
+  let score=18+action+pos+r*.34+f*.24+g*.18+(spr<=1.5?10:spr<=3?6:spr<=6?1:-7); score=Math.max(0,Math.min(100,Math.round(score)));
+  let v,reason;
+  if(score>=81){v='🍊 침투 승인 — 귤이 칩을 집습니다.';reason='상대 레인지가 충분히 압축됐고 폴드 유도 여지가 있습니다. SPR도 낮아 압박 한 번으로 결정을 강요하기 좋은 구간입니다. 단, 5-bet에서는 침투보다 무사귀환을 고려하세요.'}
+  else if(score>=61){v='🟢 침투 가능 — 귤티오가 고개를 끄덕입니다.';reason='레인지 압축과 폴드 유도력이 괜찮습니다. 포지션까지 좋다면 공격할 명분이 생깁니다.'}
+  else if(score>=31){v='🟡 관찰 — 아직 칩을 들지 마세요.';reason='틈은 있지만 충분히 크지 않습니다. 상대의 다음 액션과 테이블 이미지가 더 중요합니다.'}
+  else{v='🔴 귤티오 금지 — 자진퇴거 권고.';reason='상대 압축도나 폴드 유도력이 부족합니다. 지금 들어가면 침투가 아니라 헌납일 가능성이 큽니다.'}
+  $("inScore").textContent=score+' / 100'; $("inFill").style.width=score+'%'; $("inVerdict").textContent=v; $("inReason").textContent=reason;
+ }
+ $("penetrate").onclick=calc;
+ $("randomScenario").onclick=()=>{const A=[0,12,20],P=[14,12,9,7,5,4];$("inAction").value=A[Math.floor(Math.random()*A.length)];$("inPos").value=P[Math.floor(Math.random()*P.length)];range.value=25+Math.floor(Math.random()*76);fold.value=20+Math.floor(Math.random()*81);gyul.value=20+Math.floor(Math.random()*81);$("inSpr").value=(.8+Math.random()*6).toFixed(1);range.oninput();fold.oninput();gyul.oninput();calc()};
+ calc();
+})();
+</script>
+</body>
+</html>
